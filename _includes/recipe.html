@@ -1,0 +1,67 @@
+<div id="recipe" class="recipe-container">
+
+  <div class="row recipe-overview">
+    <div class="col-12 col-sm-4 text-center">
+      {% include recipe-icon.html icon="quantity" %}
+      <span>{{ page.recipe.servings }}</span>
+    </div>
+    <div class="col-12 col-sm-4 text-center">
+      {% include recipe-icon.html icon="time" %}
+      <span>{{ page.recipe.prep }}</span>
+    </div>
+    <div class="col-12 col-sm-4 text-center">
+      {% include recipe-icon.html icon="cook" %}
+      <span>{{ page.recipe.cook }}</span>
+    </div>
+  </div>
+
+  <div class="recipe-contents">
+    <div class="row">
+      <div class="col-12 col-sm-4">
+
+        <!-- <ul class="recipe-overview">
+          <li>
+            {% include recipe-icon.html icon="quantity" %}
+            <span>{{ page.recipe.servings }}</span>
+          </li>
+          <li>
+            {% include recipe-icon.html icon="time" %}
+            <span>{{ page.recipe.prep }}</span>
+          </li>
+          <li>
+            {% include recipe-icon.html icon="cook" %}
+            <span>{{ page.recipe.cook }}</span>
+          </li>
+        <ul> -->
+
+        <h2>Ingrédients</h2>
+
+        {% if include.recipe.ingredients[0].first %}
+          {% for part in page.recipe.ingredients %}
+            <h4>{{ part.title }}</h4>
+            {% include ingredients.html ingredients=part.ingredients %}
+          {% endfor %}
+        {% else %}
+          {% include ingredients.html ingredients=include.recipe.ingredients %}
+        {% endif %}
+
+      </div>
+
+      <div class="col-12 col-sm-8">
+        <h2>Instructions</h2>
+
+        {% if include.recipe.directions[0].first %}
+          {% for part in include.recipe.directions %}
+            <h4>{{ part.title }}</h4>
+            {% include directions.html directions=part.directions %}
+          {% endfor %}
+        {% else %}
+          {% include directions.html directions=include.recipe.directions %}
+        {% endif %}
+
+      </div>
+    </div>
+
+  </div>
+
+</div>

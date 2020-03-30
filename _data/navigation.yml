@@ -1,0 +1,12 @@
+- name: Accueil
+  link: /
+- name: À propos
+  link: /about/
+# - name: Recettes
+#   link: /recipes/
+# - name: Principal
+#   link: /main/
+# - name: Desserts
+#   link: /desserts/
+# - name: Vivants
+#   link: /alive/

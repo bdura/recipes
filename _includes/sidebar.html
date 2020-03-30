@@ -1,0 +1,10 @@
+<aside class="sidebar {% if page.push_sidebar_down %}push{% endif %}">
+	<div class="author text-center">
+		<p>
+			<a href="{{ site.baseurl }}/about/">
+				<img src="{{ site.baseurl }}{{ site.data.sidebar.image }}" class="author img-fluid">
+			</a>
+		</p>
+		<p>{{ site.data.sidebar.description_markdown | markdownify }}</p>
+	</div>
+</aside>
