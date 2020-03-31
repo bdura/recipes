@@ -8,3 +8,5 @@ vendor
 
 __pycache__
 book.pdf
+
+.DS_Store
