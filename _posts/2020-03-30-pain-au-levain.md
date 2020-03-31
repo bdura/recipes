@@ -29,7 +29,7 @@ recipe:
       directions:
         - Préchauffer le four à 240°C. Si vous avez une cocotte en fonte, mettez-la à chauffer aussi.
         - Sur un plan de travail fariné, sortir délicatement le pâton de son torchon, coutûre vers le bas.
-        - Avec un couteau très bien aigisé, pratiquer une ou plusieurs incision.
+        - Avec un couteau très bien aiguisé, pratiquer une ou plusieurs incision.
         - Enfourner.
 ---
 
