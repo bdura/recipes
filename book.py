@@ -15,8 +15,6 @@ recipe = env.get_template('recipe.tex')
 itemization = env.get_template('itemize.tex')
 enumeration = env.get_template('enumerate.tex')
 
-OPTIONS = 'left=0pt,parsep=10pt'
-
 
 def process_subsections(array, item, template=itemization):
     subsections = []
@@ -25,7 +23,7 @@ def process_subsections(array, item, template=itemization):
         title = subsection['title']
         items = subsection[item]
 
-        text = r'\textit{' + title + '}\n' + template.render(items=items, options=OPTIONS)
+        text = r'\textit{' + title + '}\n' + template.render(items=items)
 
         subsections.append(text)
 
