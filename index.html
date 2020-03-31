@@ -1,29 +1,8 @@
 ---
-# Feel free to add content and custom Front Matter to this file.
-# To modify the layout, see https://jekyllrb.com/docs/themes/#overriding-theme-defaults
 title: Accueil
 layout: default
 ---
 
 {% for post in paginator.posts %}
-  <article class="post">
-    {% include post-heading.html post=post %}
-    <div class="row">
-      <div class="col-12 col-sm-6">
-
-        <div class="image">
-          <a href="{{ site.baseurl }}{{ post.url }}">
-            <img src="{{ post.image }}" alt="{{ post.title }}" class="img-fluid">
-          </a>
-        </div>
-
-      </div>
-      <div class="col-12 col-sm-6">
-
-        {{ post.excerpt }}
-
-        <p><a class="button" href="{{ site.baseurl }}{{ post.url }}">En savoir plus</a></p>
-      </div>
-    </div>
-  </article>
+  {% include recipe-card.html post=post %}
 {% endfor %}
