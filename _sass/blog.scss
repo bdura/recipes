@@ -8,8 +8,26 @@
 		}
 	}
 	time {
-		padding: 0 0 20px 0;
+		// padding: 0 0 20px 0;
 		display: block;
+	}
+
+	.post-header {
+		padding-bottom: 10px;
+
+		.source {
+			color: $light-grey;
+			margin: 0px;
+
+			a {
+				color: $light-grey;
+
+				&:hover {
+					color: black;
+					text-decoration: none;
+				}
+			}
+		}
 	}
 
 	.recipe-overview {
