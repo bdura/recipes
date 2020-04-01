@@ -33,9 +33,9 @@ paginate_path: "/:num/"
 permalink: pretty
 
 # Localisation configuration
-languages: ["en", "fr"]
+languages: ["fr", "en"]
 exclude_from_localizations: ["assets", "CNAME"]
-defaultLang: en
+defaultLang: fr
 languageNames:
   fr: Français
   en: English

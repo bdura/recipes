@@ -12,7 +12,12 @@ recipe:
 
 titles:
   about: About
+  recipes: All our recipes
+
+navigation:
+  about: About
   home: Home
+  recipes: Recipes
 
 footer:
   theme: Adapted from a theme by
@@ -23,4 +28,5 @@ error:
 
 categories:
   live: Live
-  breakfast: Petit-déjeuner
+  breakfast: Breakfast
+  dinner: Dinner

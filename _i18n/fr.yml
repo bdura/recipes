@@ -12,7 +12,12 @@ recipe:
 
 titles:
   about: À propos
+  recipes: Toutes les recettes
+
+navigation:
+  about: À propos
   home: Accueil
+  recipes: Recettes
 
 footer:
   theme: Adapté d'un thème
@@ -23,3 +28,5 @@ error:
 
 categories:
   live: Vivants
+  breakfast: Petit-déjeuner
+  dinner: Dîner

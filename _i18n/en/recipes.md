@@ -1,0 +1,3 @@
+# Recipes
+
+All our recipes, gathered by category...

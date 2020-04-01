@@ -1,6 +1,8 @@
-- name: titles.home
+- name: navigation.home
   link: /
-- name: titles.about
+- name: navigation.recipes
+  link: /recipes/
+- name: navigation.about
   link: /about/
 # - name: Recettes
 #   link: /recipes/
