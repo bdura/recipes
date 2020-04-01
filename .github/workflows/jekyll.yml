@@ -19,28 +19,9 @@ jobs:
         docker run \
         -v ${{ github.workspace }}:/srv/jekyll -v ${{ github.workspace }}/_site:/srv/jekyll/_site \
         jekyll/builder:latest /bin/bash -c "chmod 777 /srv/jekyll && jekyll build --future"
-    - name: Check
-      run: |
-        ls
-        ls ./_site
-    - name: Checkout gh-pages branch
-      uses: actions/checkout@v2
+    - name: Deploy 🚀
+      uses: JamesIves/github-pages-deploy-action@releases/v3
       with:
-        ref: gh-pages
-    - name: Check if _site is still here
-      run: |
-        ls
-        echo "testing"
-        ls ./_site
-    - name: Checkout gh-pages branch
-      run: |
-        git checkout gh-pages
-#    - name: Commit files
-#        run: |
-#          git config --local user.email "action@github.com"
-#          git config --local user.name "GitHub Action"
-#          git commit -m "Add changes" -a
-#    - name: Push changes
-#      uses: ad-m/github-push-action@master
-#      with:
-#        github_token: ${{ secrets.GITHUB_TOKEN }}
+        ACCESS_TOKEN: ${{ secrets.ACCESS_TOKEN }}
+        BRANCH: gh-pages # The branch the action should deploy to.
+        FOLDER: _site # The folder the action should deploy.
