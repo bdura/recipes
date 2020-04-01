@@ -24,6 +24,15 @@ jobs:
         ls
         ls ./_site
     - name: Checkout gh-pages branch
+      uses: actions/checkout@v2
+      with:
+        ref: gh-pages
+    - name: Check if _site is still here
+      run: |
+        ls
+        echo "testing"
+        ls ./_site
+    - name: Checkout gh-pages branch
       run: |
         git checkout gh-pages
 #    - name: Commit files
