@@ -1,1 +1,4 @@
-logo: assets/images/logo.svg
+ordered_categories:
+  - breakfast
+  - live
+  - dinner

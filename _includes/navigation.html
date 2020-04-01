@@ -5,6 +5,13 @@
 		{% if link.link == page.url %}
 			{% assign class = class | append: " active" %}
 		{% endif %}
-		<a href="{% include relative-src.html src=link.link %}" class="{{ class }}">{{ link.name }}</a>
+		<a href="{% include relative-src.html src=link.link %}" class="{{ class }}">
+			<!-- {{ link.name }} -->
+			{% t link.name %}
+		</a>
 	{% endfor %}
+
+	<!-- <div class="language-switch align-middle">
+		fr/en
+	</div> -->
 </nav>

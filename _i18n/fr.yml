@@ -1,0 +1,32 @@
+site:
+  name: Recettes
+  description: Quelques recettes récupérées ici et là...
+
+recipe:
+  header:
+    source: Inspiré par
+    takeme: Voir la recette
+    readmore: En savoir plus
+  directions: Instructions
+  ingredients: Ingrédients
+
+titles:
+  about: À propos
+  recipes: Toutes les recettes
+
+navigation:
+  about: À propos
+  home: Accueil
+  recipes: Recettes
+
+footer:
+  theme: Adapté d'un thème
+
+error:
+  title: Page introuvable
+  message: Cette recette n'existe pas en français...
+
+categories:
+  live: Vivants
+  breakfast: Petit-déjeuner
+  dinner: Dîner

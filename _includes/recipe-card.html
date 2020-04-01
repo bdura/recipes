@@ -3,7 +3,7 @@
   <div class="row">
     <div class="col-12 col-sm-6">
 
-      <div class="image">
+      <div class="image" style="margin-bottom: 5px;">
         <a href="{{ site.baseurl }}{{ post.url }}">
           <img src="{{ post.image }}" alt="{{ post.title }}" class="img-fluid">
         </a>
@@ -14,7 +14,7 @@
 
       {{ include.post.excerpt }}
 
-      <a class="button take-me align-bottom" href="{{ site.baseurl }}{{ post.url }}">En savoir plus</a>
+      <a class="button take-me align-bottom" href="{{ site.baseurl }}{{ post.url }}">{% t recipe.header.readmore %}</a>
     </div>
   </div>
 </article>

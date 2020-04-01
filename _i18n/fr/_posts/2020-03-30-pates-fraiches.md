@@ -2,6 +2,7 @@
 date: 2020-03-29
 title: Pâtes fraiches
 categories:
+  - dinner
 image: https://source.unsplash.com/4nXkhLCrkLo/auto=format
 recipe:
   servings: 5 portions
