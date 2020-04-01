@@ -34,7 +34,7 @@
           </li>
         <ul> -->
 
-        <h2>Ingrédients</h2>
+        <h2>{% t recipe.ingredients %}</h2>
 
         {% if include.recipe.ingredients[0].first %}
           {% for part in page.recipe.ingredients %}
@@ -48,7 +48,7 @@
       </div>
 
       <div class="col-12 col-sm-8">
-        <h2>Instructions</h2>
+        <h2>{% t recipe.directions %}</h2>
 
         {% if include.recipe.directions[0].first %}
           {% for part in include.recipe.directions %}

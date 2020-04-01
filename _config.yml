@@ -27,9 +27,18 @@ url: "https://recipes.bdura.me" # the base hostname & protocol for your site, e.
 
 logo: /assets/images/author.png
 
+# Paginator configuration
 paginate: 10
 paginate_path: "/:num/"
 permalink: pretty
+
+# Localisation configuration
+languages: ["en", "fr"]
+exclude_from_localizations: ["assets", "CNAME"]
+defaultLang: en
+languageNames:
+  fr: Français
+  en: English
 
 defaults:
 -
@@ -41,6 +50,7 @@ defaults:
 
 plugins:
   - jekyll-paginate
+  - jekyll-multiple-languages-plugin
 
 exclude:
   - Gemfile

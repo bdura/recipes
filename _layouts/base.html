@@ -1,6 +1,6 @@
 <!doctype html>
 
-<html lang="en">
+<html lang="{{ site.lang }}">
 
 	{% include head.html %}
 
@@ -13,13 +13,8 @@
 			{{ content }}
 
 		</div>
-		<footer>
-			<div class="container">
-				<hr>
-				&copy; {{ site.title }}  {{ site.time | date: "%Y" }}. Adapté d'un thème
-                    <a href="https://github.com/CloudCannon/treat-jekyll-template" target="_blank" rel="noopener">CloudCannon</a>.
-			</div>
-		</footer>
+
+		{% include footer.html %}
 
 		<script src="https://code.jquery.com/jquery-3.4.1.slim.min.js" integrity="sha384-J6qa4849blE2+poT4WnyKhv5vZF5SrPo0iEjwBvKU7imGFAV0wwj1yYfoRSJoZ+n" crossorigin="anonymous"></script>
 		<script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js" integrity="sha384-Q6E9RHvbIyZFJoft+2mJbHaEWldlvI9IOYy5n3zV9zzTtmI3UksdQRVvoxMfooAo" crossorigin="anonymous"></script>

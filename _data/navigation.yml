@@ -1,6 +1,6 @@
-- name: Accueil
+- name: titles.home
   link: /
-- name: À propos
+- name: titles.about
   link: /about/
 # - name: Recettes
 #   link: /recipes/

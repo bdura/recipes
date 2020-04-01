@@ -1,7 +1,7 @@
 <div class="post-header">
 	{% if include.post_page %}
 		<div class="take-me">
-			<a class="button" href="#recipe">Voir la recette</a>
+			<a class="button" href="#recipe">{% t recipe.header.takeme %}</a>
 		</div>
 	{% endif %}
 	<h1>
@@ -14,7 +14,7 @@
 	</time>
 	{% if include.post_page and include.post.source %}
 		<p class="source">
-			Inspiré de <a href="{{ include.post.source.link }}">
+			{% t recipe.header.source %} <a href="{{ include.post.source.link }}">
 				{{ include.post.source.name }}
 			</a>
 		</p>

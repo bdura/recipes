@@ -1,0 +1,28 @@
+<footer>
+  <div class="container">
+    <hr>
+    &copy; {% t site.name %}  {{ site.time | date: "%Y" }}. {% t footer.theme %}
+    <a href="https://github.com/CloudCannon/treat-jekyll-template" target="_blank" rel="noopener">CloudCannon</a>.
+
+<!-- {{ site.lang }} -->
+
+    <div class="language-switch">
+      {% for lang in site.languageNames %}
+        {% if lang[0] == site.lang %}
+          <a href="{{ site.baseurl }}{{ page.url}}" class="active">{{ lang[0] }}</a>
+        {% else %}
+          {% if lang[0] == site.defaultLang %}
+            <a href="{{ site.baseurl_root }}{{ page.url}}">{{ lang[0] }}</a>
+          {% else %}
+            <a href="{{ site.baseurl_root }}/{{ lang[0] }}{{ page.url}}">{{ lang[0] }}</a>
+          {% endif %}
+        {% endif %}
+        {% if forloop.last == false %}
+            •
+        {% endif %}
+      {% endfor %}
+    </div>
+
+
+  </div>
+</footer>

@@ -1,0 +1,22 @@
+site:
+  name: Recipes
+  description: A few recipes gathered here and there...
+
+recipe:
+  header:
+    source: Inspired by
+    takeme: Jump to recipe
+    readmore: Read more
+  directions: Directions
+  ingredients: Ingredients
+
+titles:
+  about: About
+  home: Home
+
+footer:
+  theme: Adapted from a theme by
+
+error:
+  title: Page not found
+  message: The recipe does not exist in English...
