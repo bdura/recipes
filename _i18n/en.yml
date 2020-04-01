@@ -20,3 +20,7 @@ footer:
 error:
   title: Page not found
   message: The recipe does not exist in English...
+
+categories:
+  live: Live
+  breakfast: Petit-déjeuner

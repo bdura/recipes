@@ -2,6 +2,7 @@
 date: 2020-03-30
 title: Pain au levain
 categories:
+  - live
 image: https://source.unsplash.com/j1gr2w10EtQ/auto=format
 recipe:
   servings: 1 pain

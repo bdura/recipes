@@ -20,3 +20,6 @@ footer:
 error:
   title: Page introuvable
   message: Cette recette n'existe pas en français...
+
+categories:
+  live: Vivants
