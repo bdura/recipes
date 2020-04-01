@@ -22,3 +22,16 @@ jobs:
     - name: Check
       run: |
         ls
+        ls ./_site
+    - name: Checkout gh-pages branch
+      run: |
+        git checkout gh-pages
+#    - name: Commit files
+#        run: |
+#          git config --local user.email "action@github.com"
+#          git config --local user.name "GitHub Action"
+#          git commit -m "Add changes" -a
+#    - name: Push changes
+#      uses: ad-m/github-push-action@master
+#      with:
+#        github_token: ${{ secrets.GITHUB_TOKEN }}
