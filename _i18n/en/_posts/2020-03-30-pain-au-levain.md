@@ -1,18 +1,18 @@
 ---
 date: 2020-03-30
-title: Pain au levain
+title: Sourdough bread
 categories:
   - live
 image: https://source.unsplash.com/j1gr2w10EtQ/auto=format
 recipe:
-  servings: 1 pain
+  servings: 1 bred
   prep: 20 minutes
-  cook: 8 heures
+  cook: 8 hours
   ingredients:
-    - 500g de farine blanche
-    - 150g de levain
-    - 330ml d'eau
-    - 10g de sel
+    - 500g of wheat flour
+    - 150g of sourdough
+    - 330ml of water
+    - 10g  of salt
   directions:
     - title: Pointage
       directions:

@@ -1,19 +1,21 @@
 ---
 date: 2020-03-29
-title: Pâtes fraiches
+title: Fresh pasta
 categories:
+  - dinner
 image: https://source.unsplash.com/4nXkhLCrkLo/auto=format
 recipe:
   servings: 5 portions
   prep: 20 minutes
   cook: 10 minutes
   ingredients:
-    - 400g de farine
-    - 4 oeufs
-    - 15ml d'eau
-    - une pincée de sel
+    - 400g of flour
+    - 4 eggs
+    - 15ml of water
+    - a pinch of salt
   directions:
-    - Mélanger les ingrédients et pétrir la pâte pendant quelques minutes.
-    - Laisser reposer au moins trente minutes au réfrigérateur.
-    - Aplatir et découper la pâte.
+    - Mix the ingredients together and knead the dough for a few minutes.
+    - Let it rest at least thirty minutes in the refrigerator, packed in plastic film.
+    - Flatten and cut the dough to get the pasta.
+    - Cook it in salted boiling water until ready (around 4 minutes).
 ---
