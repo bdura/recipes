@@ -9,8 +9,9 @@
 			{{ include.post.title }}
 		</a>
 	</h1>
-	<time datetime="{{ include.post.date | date_to_xmlschema }}">
-		{{ include.post.date | date: "%B %-d, %Y" }}
+	<time datetime="{{ include.post.date }}">
+		<!-- {{ include.post.date | date: "%B %-d, %Y" }} -->
+		{{ include.post.date | localize: ":custom", site.lang }}
 	</time>
 	{% if include.post_page and include.post.source %}
 		<p class="source">

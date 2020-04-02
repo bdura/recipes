@@ -27,6 +27,37 @@ error:
   message: Cette recette n'existe pas en français...
 
 categories:
-  live: Vivants
+  live: Vivant
   breakfast: Petit-déjeuner
   dinner: Dîner
+
+date:
+  day_names:
+    - dimanche
+    - lundi
+    - mardi
+    - mercredi
+    - jeudi
+    - vendredi
+    - samedi
+  month_names:
+    - janvier
+    - février
+    - mars
+    - avril
+    - mai
+    - juin
+    - juillet
+    - août
+    - septembre
+    - octobre
+    - novembre
+    - décembre
+  abbr_day_names   : # Array of abbreviations of above Day names. e.g. "Sun", "Mon", .
+  abbr_month_names : # Array of abbreviations of above Month names. e.g. "Jan", "Feb",
+
+time:
+  am: "am"
+  pm: "pm"
+  formats:
+    default: "%B %d, %Y %l:%M:%S %p %z"
