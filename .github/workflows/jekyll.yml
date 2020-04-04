@@ -31,7 +31,15 @@ jobs:
           python book.py -p _i18n/en -o book-en
 
       - name: Compile LaTeX document 📖
-        run: docker run -v ${{ github.workspace }}:/data mirisbowring/texlive_ctan_full:2019 latexmk -pdf -c
+        run: |
+          curl -L https://raw.githubusercontent.com/aslushnikov/latex-online/master/util/latexonline \
+          > laton && chmod 755 laton
+          laton book-fr
+          laton book-en
+          rm *.tex
+
+      #      - name: Compile LaTeX document 📖
+      #        run: docker run -v ${{ github.workspace }}:/data mirisbowring/texlive_ctan_full:2019 latexmk -pdf -c
 
       - name: Build the site with Jekyll 🧪
         run: |
