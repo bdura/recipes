@@ -15,11 +15,6 @@ jobs:
       - name: Checkout repository
         uses: actions/checkout@v2
 
-      #      - name: Build the site with Jekyll 🧪
-      #        run: |
-      #          docker run -v ${{ github.workspace }}:/website basiledura/jekyll:latest \
-      #          /bin/bash -c "chmod 777 /srv/jekyll && bundle exec jekyll build"
-
       - name: Set up Python 3.7 🐍
         uses: actions/setup-python@v1
         with:
@@ -40,9 +35,14 @@ jobs:
 
       - name: Build the site with Jekyll 🧪
         run: |
-          docker run \
-          -v ${{ github.workspace }}:/srv/jekyll -v ${{ github.workspace }}/_site:/srv/jekyll/_site \
-          jekyll/builder:latest /bin/bash -c "chmod 777 /srv/jekyll && jekyll build --future"
+          docker run -v ${{ github.workspace }}:/website  --rm --entrypoint "" basiledura/jekyll:latest \
+          bundle exec jekyll build
+
+      #      - name: Build the site with Jekyll 🧪
+      #        run: |
+      #          docker run \
+      #          -v ${{ github.workspace }}:/srv/jekyll -v ${{ github.workspace }}/_site:/srv/jekyll/_site \
+      #          jekyll/builder:latest /bin/bash -c "chmod 777 /srv/jekyll && jekyll build --future"
 
       - name: Deploy 🚀
         uses: JamesIves/github-pages-deploy-action@releases/v3
