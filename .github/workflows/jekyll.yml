@@ -3,6 +3,8 @@ name: Jekyll site CI
 on:
   push:
     branches: [ master ]
+  pull_request:
+    branches: [ master ]
 
 jobs:
   build:
@@ -12,17 +14,6 @@ jobs:
     steps:
       - name: Checkout repository
         uses: actions/checkout@v2
-
-      #      - name: Build the site with Jekyll 🧪
-      #        run: |
-      #          docker run -v ${{ github.workspace }}:/website basiledura/jekyll:latest \
-      #          /bin/bash -c "chmod 777 /srv/jekyll && bundle exec jekyll build"
-
-      - name: Build the site with Jekyll 🧪
-        run: |
-          docker run \
-          -v ${{ github.workspace }}:/srv/jekyll -v ${{ github.workspace }}/_site:/srv/jekyll/_site \
-          jekyll/builder:latest /bin/bash -c "chmod 777 /srv/jekyll && jekyll build --future"
 
       - name: Set up Python 3.7 🐍
         uses: actions/setup-python@v1
@@ -40,10 +31,12 @@ jobs:
           python book.py -p _i18n/en -o book-en
 
       - name: Compile LaTeX document 📖
-        run: docker run -v ${{ github.workspace }}:data mirisbowring/texlive_ctan_basic:2019 latexmk -pdf
+        run: docker run -v ${{ github.workspace }}:/data mirisbowring/texlive_ctan_full:2019 latexmk -pdf -c
 
-      - name: Move books to the website ➡️
-        run: cp book-*.pdf _site/
+      - name: Build the site with Jekyll 🧪
+        run: |
+          docker run -v ${{ github.workspace }}:/website --rm basiledura/jekyll:latest \
+          bundle exec jekyll build
 
       - name: Deploy 🚀
         uses: JamesIves/github-pages-deploy-action@releases/v3
@@ -51,3 +44,4 @@ jobs:
           ACCESS_TOKEN: ${{ secrets.ACCESS_TOKEN }}
           BRANCH: gh-pages # The branch the action should deploy to.
           FOLDER: _site # The folder the action should deploy.
+          CLEAN: true
