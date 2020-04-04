@@ -34,12 +34,17 @@ jobs:
           python book.py -p _i18n/fr -o book-fr
           python book.py -p _i18n/en -o book-en
 
-      - name: Compile LaTeX document
-        uses: dante-ev/latex-action@master
-        with:
-          root_file: book.tex
+       - name: Compile LaTeX document
+         uses: dante-ev/latex-action@master
+         with:
+           root_file: book-fr.tex
 
-      - name: Move to the website
+       - name: Compile LaTeX document
+         uses: dante-ev/latex-action@master
+         with:
+           root_file: book-en.tex
+
+      - name: Move books to the website
         run: mv book-*.pdf _site/
 
       - name: Deploy 🚀
