@@ -61,21 +61,22 @@ class Recipe(object):
     def ingredients(self):
         ingredients = self.recipe['ingredients']
         if isinstance(ingredients[0], str):
-            return itemization.render(items=ingredients, options=OPTIONS)
+            return itemization.render(items=ingredients)
         return process_subsections(ingredients, 'ingredients', itemization)
 
     @property
     def directions(self):
         directions = self.recipe['directions']
         if isinstance(directions[0], str):
-            return enumeration.render(items=directions, options=OPTIONS)
+            return enumeration.render(items=directions)
         return process_subsections(directions, 'directions', enumeration)
 
 
 @click.command()
-@click.option('--posts-dir', '-p', default='_posts', help='Posts directory')
-@click.option('--output', '-o', default='book.pdf', help='Output')
-def create_book(posts_dir, output):
+@click.option('--posts-dir', '-p', default='_i18n/fr', help='Posts directory')
+@click.option('--output', '-o', default='book', help='Output')
+@click.option('--to-pdf', is_flag=True, help='Whether to output the PFD directly')
+def create_book(posts_dir, output, to_pdf):
     posts = []
     for root, _, files in os.walk(posts_dir):
         posts.extend([os.path.join(root, f) for f in files])
@@ -88,10 +89,14 @@ def create_book(posts_dir, output):
     template = env.get_template('base.tex')
     book = template.render(recipes=recipes).replace('°', r'$^\circ$')
 
-    # this builds a pdf-file inside a temporary directory
-    pdf = build_pdf(book)
+    if to_pdf:
+        # this builds a pdf-file inside a temporary directory
+        pdf = build_pdf(book)
 
-    pdf.save_to(output)
+        pdf.save_to(f'{output}.pdf')
+    else:
+        with open(f'{output}.tex', 'w') as f:
+            f.write(book)
 
 
 if __name__ == '__main__':
