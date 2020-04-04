@@ -34,7 +34,7 @@ permalink: pretty
 
 # Localisation configuration
 languages: ["fr", "en"]
-exclude_from_localizations: ["assets", "CNAME"]
+exclude_from_localizations: ["assets", "CNAME", "book-fr.pdf", "book-en.pdf"]
 defaultLang: fr
 languageNames:
   fr: Français
@@ -58,6 +58,8 @@ exclude:
   - readme.md
   - LICENCE
   - book.py
+  - requirements.txt
+  - Dockerfile
 
 include:
   - .nojekyll

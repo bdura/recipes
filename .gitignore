@@ -7,6 +7,6 @@ vendor
 .idea
 
 __pycache__
-book.pdf
+book-fr.pdf
 
 .DS_Store
