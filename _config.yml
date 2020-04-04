@@ -55,6 +55,6 @@ plugins:
 exclude:
   - Gemfile
   - Gemfile.lock
-  - README.md
+  - readme.md
   - LICENCE
   - book.py

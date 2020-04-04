@@ -1,0 +1,3 @@
+# Recipes
+
+A simple site to gather a few recipes found here and there...
