@@ -15,34 +15,28 @@ jobs:
       - name: Checkout repository
         uses: actions/checkout@v2
 
-      #      - name: Set up Python 3.7 🐍
-      #        uses: actions/setup-python@v1
-      #        with:
-      #          python-version: 3.7
-      #
-      #      - name: Install dependencies ⬇️
-      #        run: |
-      #          python -m pip install --upgrade pip
-      #          pip install -r requirements.txt
-      #
-      #      - name: Make LaTeX document 📕
-      #        run: |
-      #          python book.py -p _i18n/fr -o book-fr
-      #          python book.py -p _i18n/en -o book-en
-      #
-      #      - name: Compile LaTeX document 📖
-      #        run: docker run -v ${{ github.workspace }}:/data mirisbowring/texlive_ctan_full:2019 latexmk -pdf -c
+      - name: Set up Python 3.7 🐍
+        uses: actions/setup-python@v1
+        with:
+          python-version: 3.7
+
+      - name: Install dependencies ⬇️
+        run: |
+          python -m pip install --upgrade pip
+          pip install -r requirements.txt
+
+      - name: Make LaTeX document 📕
+        run: |
+          python book.py -p _i18n/fr -o book-fr
+          python book.py -p _i18n/en -o book-en
+
+      - name: Compile LaTeX document 📖
+        run: docker run -v ${{ github.workspace }}:/data mirisbowring/texlive_ctan_full:2019 latexmk -pdf -c
 
       - name: Build the site with Jekyll 🧪
         run: |
           docker run -v ${{ github.workspace }}:/website  --rm --entrypoint "" basiledura/jekyll:latest \
           bundle exec jekyll build
-
-      #      - name: Build the site with Jekyll 🧪
-      #        run: |
-      #          docker run \
-      #          -v ${{ github.workspace }}:/srv/jekyll -v ${{ github.workspace }}/_site:/srv/jekyll/_site \
-      #          jekyll/builder:latest /bin/bash -c "chmod 777 /srv/jekyll && jekyll build --future"
 
       - name: Deploy 🚀
         uses: JamesIves/github-pages-deploy-action@releases/v3
