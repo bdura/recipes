@@ -1,50 +1,35 @@
 <div id="recipe" class="recipe-container">
 
   <div class="row recipe-overview">
-    {% if page.recipe.rest %}
-    <div class="col-sm text-center">
-      {% include recipe-icon.html icon="quantity" %}
-      <span>{{ page.recipe.servings }}</span>
-    </div>
+    {% if page.recipe.servings %}
+      <div class="col-sm text-center">
+        {% include recipe-icon.html icon="quantity" %}
+        <span>{{ page.recipe.servings }}</span>
+      </div>
+    {% endif %}
+    {% if page.recipe.prep %}
+      <div class="col-sm text-center">
+        {% include recipe-icon.html icon="time" %}
+        <span>{{ page.recipe.prep }}</span>
+      </div>
+    {% endif %}
+    {% if page.recipe.cook %}
+      <div class="col-sm text-center">
+        {% include recipe-icon.html icon="cook" %}
+        <span>{{ page.recipe.cook }}</span>
+      </div>
     {% endif %}
     {% if page.recipe.rest %}
-    <div class="col-sm text-center">
-      {% include recipe-icon.html icon="time" %}
-      <span>{{ page.recipe.prep }}</span>
-    </div>
-    {% endif %}
-    {% if page.recipe.rest %}
-    <div class="col-sm text-center">
-      {% include recipe-icon.html icon="cook" %}
-      <span>{{ page.recipe.cook }}</span>
-    </div>
-    {% endif %}
-    {% if page.recipe.rest %}
-    <div class="col-sm text-center">
-      {% include recipe-icon.html icon="rest" %}
-      <span>{{ page.recipe.rest }}</span>
-    </div>
+      <div class="col-sm text-center">
+        {% include recipe-icon.html icon="rest" %}
+        <span>{{ page.recipe.rest }}</span>
+      </div>
     {% endif %}
   </div>
 
   <div class="recipe-contents">
     <div class="row">
       <div class="col-12 col-sm-4">
-
-        <!-- <ul class="recipe-overview">
-          <li>
-            {% include recipe-icon.html icon="quantity" %}
-            <span>{{ page.recipe.servings }}</span>
-          </li>
-          <li>
-            {% include recipe-icon.html icon="time" %}
-            <span>{{ page.recipe.prep }}</span>
-          </li>
-          <li>
-            {% include recipe-icon.html icon="cook" %}
-            <span>{{ page.recipe.cook }}</span>
-          </li>
-        <ul> -->
 
         <h2>{% t recipe.ingredients %}</h2>
 
@@ -63,12 +48,12 @@
         <h2>{% t recipe.directions %}</h2>
 
         {% if include.recipe.directions[0].first %}
-          {% for part in include.recipe.directions %}
-            <h4>{{ part.title }}</h4>
-            {% include directions.html directions=part.directions %}
-          {% endfor %}
+        {% for part in include.recipe.directions %}
+        <h4>{{ part.title }}</h4>
+        {% include directions.html directions=part.directions %}
+        {% endfor %}
         {% else %}
-          {% include directions.html directions=include.recipe.directions %}
+        {% include directions.html directions=include.recipe.directions %}
         {% endif %}
 
       </div>
