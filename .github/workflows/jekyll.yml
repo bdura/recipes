@@ -42,7 +42,7 @@ jobs:
           python book.py -p _i18n/en -o book-en
 
       - name: Compile LaTeX document 📖
-        run: docker run -v ${{ github.workspace }}:/data mirisbowring/texlive_ctan_basic:2019 latexmk -pdf
+        run: docker run -v ${{ github.workspace }}:/data mirisbowring/texlive_ctan_full:2019 latexmk -pdf
 
       - name: Move books to the website ➡️
         run: cp book-*.pdf _site/
