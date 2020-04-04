@@ -3,7 +3,7 @@ name: Jekyll site CI
 on:
   push:
     branches: [ master ]
-  pull-request:
+  pull_request:
     branches: [ master ]
 
 jobs:
