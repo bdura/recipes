@@ -34,9 +34,10 @@ jobs:
         run: |
           curl -L https://raw.githubusercontent.com/aslushnikov/latex-online/master/util/latexonline \
           > laton && chmod 755 laton
-          laton book-fr
-          laton book-en
+          ./laton book-fr
+          ./laton book-en
           rm *.tex
+          rm laton
 
       #      - name: Compile LaTeX document 📖
       #        run: docker run -v ${{ github.workspace }}:/data mirisbowring/texlive_ctan_full:2019 latexmk -pdf -c
