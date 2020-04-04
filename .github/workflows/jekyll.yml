@@ -13,39 +13,39 @@ jobs:
       - name: Checkout repository
         uses: actions/checkout@v2
 
-      - name: Build the site in the jekyll/builder container
+      - name: Build the site with Jekyll 🧪
         run: |
           docker run \
           -v ${{ github.workspace }}:/srv/jekyll -v ${{ github.workspace }}/_site:/srv/jekyll/_site \
           jekyll/builder:latest /bin/bash -c "chmod 777 /srv/jekyll && jekyll build --future"
 
-      - name: Set up Python 3.7
+      - name: Set up Python 3.7 🐍
         uses: actions/setup-python@v1
         with:
           python-version: 3.7
 
-      - name: Install dependencies
+      - name: Install dependencies ⬇️
         run: |
           python -m pip install --upgrade pip
           pip install -r requirements.txt
 
-      - name: Make LaTeX document
+      - name: Make LaTeX document 📕
         run: |
           python book.py -p _i18n/fr -o book-fr
           python book.py -p _i18n/en -o book-en
 
-      - name: Compile LaTeX document
+      - name: Compile LaTeX document 📖
         uses: xu-cheng/latex-action@master
         with:
           root_file: book-fr.tex
 
-      - name: Compile LaTeX document
+      - name: Compile LaTeX document 📖
         uses: xu-cheng/latex-action@master
         with:
           root_file: book-en.tex
 
-      - name: Move books to the website
-        run: mv book-*.pdf _site/
+      - name: Move books to the website ➡️
+        run: cp book-*.pdf _site/
 
       - name: Deploy 🚀
         uses: JamesIves/github-pages-deploy-action@releases/v3
