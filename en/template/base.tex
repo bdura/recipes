@@ -1,0 +1,93 @@
+\documentclass[9pt]{extarticle}
+
+\usepackage{fancyhdr}
+
+\usepackage{multicol}
+\usepackage{enumitem}
+
+\usepackage[
+    a5paper,
+    margin=2cm,
+    top=3cm,
+    bottom=3cm
+]{geometry}
+
+\usepackage{xcolor}
+\usepackage{graphicx}
+
+% Configuration des paragraphes : pas d'alinéa, saut de ligne
+\usepackage{parskip}
+
+\usepackage{titlesec}
+
+% \titleformat*{\section}{\LARGE\bfseries}
+\titleformat*{\subsection}{\LARGE\bfseries}
+
+% \usepackage{etoc}
+
+\raggedcolumns
+
+\setlength{\multicolsep}{0pt}
+\setlength{\columnseprule}{0pt}
+
+\makeatletter
+
+\newif\if@mainmatter \@mainmattertrue
+
+\newcommand\frontmatter{%
+    \cleardoublepage
+  \@mainmatterfalse
+  \pagenumbering{roman}}
+\newcommand\mainmatter{%
+    \cleardoublepage
+  \@mainmattertrue
+  \pagenumbering{arabic}}
+\makeatother
+
+\newcommand{\nnsection}[1]{
+  \section*{#1}
+  \addcontentsline{toc}{section}{#1}
+}
+\newcommand{\nnsubsection}[1]{
+  \subsection*{#1}
+  \addcontentsline{toc}{subsection}{#1}
+}
+
+\definecolor{vegcolor}{rgb}{0,0.5,0.2}
+\definecolor{frzcolor}{rgb}{0,0,1}
+
+\newcommand{\serves}[1]{%
+    \rhead{#1}
+}
+
+\newcommand{\preptime}[2][Preparation]{%
+    \lhead{#1: #2}%
+%    \lfoot{#1: #2}%
+}
+\newcommand{\cooktime}[2][Cook time]{%
+    \rhead{#1: #2}%
+%    \rfoot{#1: #2}%
+}
+
+\pagestyle{fancy}
+
+
+\begin{document}
+
+\frontmatter
+
+\tableofcontents
+
+\mainmatter
+
+\cleardoublepage
+
+\nnsection{Salé}
+
+\cleardoublepage
+
+\BLOCK{ for recipe in recipes }
+  \BLOCK{ include 'recipe.tex' }
+\BLOCK{  endfor }
+
+\end{document}

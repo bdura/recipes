@@ -1,0 +1,4 @@
+latex
+jinja2
+python-frontmatter
+click

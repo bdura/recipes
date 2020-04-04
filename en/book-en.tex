@@ -1,0 +1,307 @@
+\documentclass[9pt]{extarticle}
+
+\usepackage{fancyhdr}
+
+\usepackage{multicol}
+\usepackage{enumitem}
+
+\usepackage[
+    a5paper,
+    margin=2cm,
+    top=3cm,
+    bottom=3cm
+]{geometry}
+
+\usepackage{xcolor}
+\usepackage{graphicx}
+
+% Configuration des paragraphes : pas d'alinéa, saut de ligne
+\usepackage{parskip}
+
+\usepackage{titlesec}
+
+% \titleformat*{\section}{\LARGE\bfseries}
+\titleformat*{\subsection}{\LARGE\bfseries}
+
+% \usepackage{etoc}
+
+\raggedcolumns
+
+\setlength{\multicolsep}{0pt}
+\setlength{\columnseprule}{0pt}
+
+\makeatletter
+
+\newif\if@mainmatter \@mainmattertrue
+
+\newcommand\frontmatter{%
+    \cleardoublepage
+  \@mainmatterfalse
+  \pagenumbering{roman}}
+\newcommand\mainmatter{%
+    \cleardoublepage
+  \@mainmattertrue
+  \pagenumbering{arabic}}
+\makeatother
+
+\newcommand{\nnsection}[1]{
+  \section*{#1}
+  \addcontentsline{toc}{section}{#1}
+}
+\newcommand{\nnsubsection}[1]{
+  \subsection*{#1}
+  \addcontentsline{toc}{subsection}{#1}
+}
+
+\definecolor{vegcolor}{rgb}{0,0.5,0.2}
+\definecolor{frzcolor}{rgb}{0,0,1}
+
+\newcommand{\serves}[1]{%
+    \rhead{#1}
+}
+
+\newcommand{\preptime}[2][Preparation]{%
+    \lhead{#1: #2}%
+%    \lfoot{#1: #2}%
+}
+\newcommand{\cooktime}[2][Cook time]{%
+    \rhead{#1: #2}%
+%    \rfoot{#1: #2}%
+}
+
+\pagestyle{fancy}
+
+
+\begin{document}
+
+\frontmatter
+
+\tableofcontents
+
+\mainmatter
+
+\cleardoublepage
+
+\nnsection{Salé}
+
+\cleardoublepage
+
+  \clearpage
+
+\nnsubsection{Fresh pasta}
+
+\serves{5 portions}
+\preptime{20 minutes}
+\cooktime{10 minutes}
+
+% \vspace{.2cm}
+
+\begin{center}
+    \parbox{0.8\linewidth}{
+        \raggedright\itshape
+
+        
+    }
+\end{center}
+
+% \vspace{.2cm}
+
+{\large \bf Ingredients}
+
+\vspace{.2cm}
+
+\begin{multicols}{2}
+
+    \begin{itemize}[label={},left=0pt,parsep=10pt]
+    \item 400g of flour
+    \item 4 eggs
+    \item 15ml of water
+    \item a pinch of salt
+\end{itemize}
+
+\end{multicols}
+
+
+
+\vspace{.4cm}
+
+{\large \bf Instructions}
+
+\begin{enumerate}[left=0pt,noitemsep]
+    \item Mix the ingredients together and knead the dough for a few minutes.
+    \item Let it rest at least thirty minutes in the refrigerator, packed in plastic film.
+    \item Flatten and cut the dough to get the pasta.
+    \item Cook it in salted boiling water until ready (around 4 minutes).
+\end{enumerate}  \clearpage
+
+\nnsubsection{Granola}
+
+\serves{600g of granola}
+\preptime{10 minutes}
+\cooktime{20 to 25 minutes}
+
+% \vspace{.2cm}
+
+\begin{center}
+    \parbox{0.8\linewidth}{
+        \raggedright\itshape
+
+        
+    }
+\end{center}
+
+% \vspace{.2cm}
+
+{\large \bf Ingredients}
+
+\vspace{.2cm}
+
+\begin{multicols}{2}
+
+    \begin{itemize}[label={},left=0pt,parsep=10pt]
+    \item 430g of big oat flakes
+    \item ~100g of nuts and/or seeds
+    \item 180g of maple sirup (or honey)
+    \item 120g of coco butter
+    \item one tea spoon of salt
+    \item one tea spoon of cinnamon
+    \item a pinch of vanilla extract
+\end{itemize}
+
+\end{multicols}
+
+
+
+\vspace{.4cm}
+
+{\large \bf Instructions}
+
+\begin{enumerate}[left=0pt,noitemsep]
+    \item Preheat the oven to 180$^\circ$C.
+    \item Combine and stir the flakes, the nuts, the cinnamon, the vanilla extract and the salt.
+    \item Add the maple sirup and the oil. Mix until the flakes are coated with the mixture.
+    \item Put the mix onto a flat oven pan covered with parchment paper. Make sure it is well spread.
+    \item Bake for 20 to 25 minutes at 180$^\circ$C. Stir again around 12 minutes in to make sure the granola bakes evenly. Spread it again and press on it to help big chunks form.
+    \item Let cool for 45 minutes before breaking it into chunks. Store in an air-tight container.
+\end{enumerate}  \clearpage
+
+\nnsubsection{Sourdough bread}
+
+\serves{1 bred}
+\preptime{20 minutes}
+\cooktime{8 hours}
+
+% \vspace{.2cm}
+
+\begin{center}
+    \parbox{0.8\linewidth}{
+        \raggedright\itshape
+
+        Un bon pain au levain...
+    }
+\end{center}
+
+% \vspace{.2cm}
+
+{\large \bf Ingredients}
+
+\vspace{.2cm}
+
+\begin{multicols}{2}
+
+    \begin{itemize}[label={},left=0pt,parsep=10pt]
+    \item 500g of wheat flour
+    \item 150g of sourdough
+    \item 330ml of water
+    \item 10g  of salt
+\end{itemize}
+
+\end{multicols}
+
+
+
+\vspace{.4cm}
+
+{\large \bf Instructions}
+
+\textit{Pointage}
+\begin{enumerate}[left=0pt,noitemsep]
+    \item Mélanger les ingrédients.
+    \item Pétrir pendant 10 minutes. Si vous avez un robot pétrisseur, faites-le fonctionner à vitesse minimale.
+    \item Sur un plan de travail fariné.
+    \item Laisser reposer six à douze heures sous un torchon humide.
+\end{enumerate}
+
+\textit{Façonnage}
+\begin{enumerate}[left=0pt,noitemsep]
+    \item Sortir le pâton délicatement sur un plan de travail fariné.
+    \item Replier le pâton sur lui-même en tâchant de ne pas perturber les bulles.
+    \item Remettre le pâton sur un torchon propre, sec et fariné, la “couture” vers le haut. recouvrir avec le reste du torchon.
+    \item Laisser reposer une heure à une heure et demie.
+\end{enumerate}
+
+\textit{Cuisson}
+\begin{enumerate}[left=0pt,noitemsep]
+    \item Préchauffer le four à 240$^\circ$C. Si vous avez une cocotte en fonte, mettez-la à chauffer aussi.
+    \item Sur un plan de travail fariné, sortir délicatement le pâton de son torchon, coutûre vers le bas.
+    \item Avec un couteau très bien aiguisé, pratiquer une ou plusieurs incision.
+    \item Enfourner.
+\end{enumerate}  \clearpage
+
+\nnsubsection{Sourdough}
+
+\serves{1 levain}
+\preptime{5 minutes a day}
+\cooktime{1 week}
+
+% \vspace{.2cm}
+
+\begin{center}
+    \parbox{0.8\linewidth}{
+        \raggedright\itshape
+
+        Sourdough is a symbiosis between bacteria and yeast that seem to appear ex-nihilo and colonise your rye-and-water mix...
+    }
+\end{center}
+
+% \vspace{.2cm}
+
+{\large \bf Ingredients}
+
+\vspace{.2cm}
+
+\begin{multicols}{2}
+
+    \textit{Every day}
+\begin{itemize}[label={},left=0pt,parsep=10pt]
+    \item 50g or rye flour
+    \item 50ml of water
+\end{itemize}
+
+\end{multicols}
+
+
+
+\vspace{.4cm}
+
+{\large \bf Instructions}
+
+\textit{On the first day}
+\begin{enumerate}[left=0pt,noitemsep]
+    \item Mix the flour and the water together. You can theoretically use regular wheat flour but for some reason I've only ever managed to start a sourdough with rye flour, so you've been warned.
+    \item Let it rest for 24h at room temperature in a clean container. It shouldn't be airtight. You can close it with a cheesecloth to make sure flies won't dive into it.
+\end{enumerate}
+
+\textit{The following days}
+\begin{enumerate}[left=0pt,noitemsep]
+    \item Remove the excess dough so that the container is always less than half full.
+    \item Add flour and water in, make sure it's well mixed together.
+    \item Repeat the operation every day until the sourdough has started. It's easy to see it has since it doubles in volume six hours or so after "feeding".
+\end{enumerate}
+
+\textit{Once the sourdough has started}
+\begin{enumerate}[left=0pt,noitemsep]
+    \item Feed it at least once a week (or once every two weeks if you keep it in the fridge).
+    \item The sourdough should be very active before you can use it to make bread. Make sure to give it one or two feed cycles before baking if you were keeping it hibernating.
+\end{enumerate}
+\end{document}
