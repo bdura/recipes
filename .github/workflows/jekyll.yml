@@ -34,8 +34,8 @@ jobs:
         run: |
           curl -L https://raw.githubusercontent.com/aslushnikov/latex-online/master/util/latexonline \
           > laton && chmod 755 laton
-          ./laton book-fr
-          ./laton book-en
+          ./laton book-fr.tex
+          ./laton book-en.tex
           rm *.tex
           rm laton
 
