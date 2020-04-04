@@ -20,16 +20,10 @@ jobs:
       #          docker run -v ${{ github.workspace }}:/website basiledura/jekyll:latest \
       #          /bin/bash -c "chmod 777 /srv/jekyll && bundle exec jekyll build"
 
-      - name: Build the site with Jekyll 🧪
-        run: |
-          docker run \
-          -v ${{ github.workspace }}:/srv/jekyll -v ${{ github.workspace }}/_site:/srv/jekyll/_site \
-          jekyll/builder:latest /bin/bash -c "chmod 777 /srv/jekyll && jekyll build --future"
-
       - name: Set up Python 3.7 🐍
-        uses: actions/setup-python@v1
-        with:
-          python-version: 3.7
+          uses: actions/setup-python@v1
+          with:
+            python-version: 3.7
 
       - name: Install dependencies ⬇️
         run: |
@@ -44,8 +38,11 @@ jobs:
       - name: Compile LaTeX document 📖
         run: docker run -v ${{ github.workspace }}:/data mirisbowring/texlive_ctan_full:2019 latexmk -pdf
 
-      - name: Move books to the website ➡️
-        run: cp book-*.pdf _site/
+      - name: Build the site with Jekyll 🧪
+        run: |
+          docker run \
+          -v ${{ github.workspace }}:/srv/jekyll -v ${{ github.workspace }}/_site:/srv/jekyll/_site \
+          jekyll/builder:latest /bin/bash -c "chmod 777 /srv/jekyll && jekyll build --future"
 
       - name: Deploy 🚀
         uses: JamesIves/github-pages-deploy-action@releases/v3
