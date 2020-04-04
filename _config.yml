@@ -60,6 +60,7 @@ exclude:
   - book.py
   - requirements.txt
   - Dockerfile
+  - "*.tex"
 
 include:
   - .nojekyll
