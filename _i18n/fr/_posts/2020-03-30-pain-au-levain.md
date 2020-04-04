@@ -7,7 +7,8 @@ image: https://source.unsplash.com/j1gr2w10EtQ/auto=format
 recipe:
   servings: 1 pain
   prep: 20 minutes
-  cook: 8 heures
+  rest: 6 à 12 heures
+  cook: 45 minutes
   ingredients:
     - 500g de farine blanche
     - 150g de levain

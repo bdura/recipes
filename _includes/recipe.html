@@ -1,18 +1,30 @@
 <div id="recipe" class="recipe-container">
 
   <div class="row recipe-overview">
-    <div class="col-12 col-sm-4 text-center">
+    {% if page.recipe.rest %}
+    <div class="col-sm text-center">
       {% include recipe-icon.html icon="quantity" %}
       <span>{{ page.recipe.servings }}</span>
     </div>
-    <div class="col-12 col-sm-4 text-center">
+    {% endif %}
+    {% if page.recipe.rest %}
+    <div class="col-sm text-center">
       {% include recipe-icon.html icon="time" %}
       <span>{{ page.recipe.prep }}</span>
     </div>
-    <div class="col-12 col-sm-4 text-center">
+    {% endif %}
+    {% if page.recipe.rest %}
+    <div class="col-sm text-center">
       {% include recipe-icon.html icon="cook" %}
       <span>{{ page.recipe.cook }}</span>
     </div>
+    {% endif %}
+    {% if page.recipe.rest %}
+    <div class="col-sm text-center">
+      {% include recipe-icon.html icon="rest" %}
+      <span>{{ page.recipe.rest }}</span>
+    </div>
+    {% endif %}
   </div>
 
   <div class="recipe-contents">

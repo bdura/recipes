@@ -58,3 +58,6 @@ exclude:
   - readme.md
   - LICENCE
   - book.py
+
+include:
+  - .nojekyll
