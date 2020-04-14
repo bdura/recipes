@@ -35,7 +35,6 @@ jobs:
         with:
           root_file: Recettes.tex Recipes.tex
           args: -pdf -c
-          extra_system_packages: geometry
 
       - name: Build the site with Jekyll 🧪
         run: |
