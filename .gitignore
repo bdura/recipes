@@ -11,3 +11,7 @@ __pycache__
 *.pdf
 
 .DS_Store
+
+*.synctex.gz
+latex-output/
+/template/*.pdf
