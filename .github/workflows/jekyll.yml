@@ -31,7 +31,6 @@ jobs:
           python book.py -d _i18n -l en
 
       - name: Compile LaTeX document 📖
-        # run: docker run -v ${{ github.workspace }}:/data mirisbowring/texlive_ctan_full:2019 latexmk -pdf -c
         uses: xu-cheng/latex-action@master
         with:
           root_file: Recettes.tex Recipes.tex
