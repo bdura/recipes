@@ -29,6 +29,7 @@ jobs:
         run: |
           python book.py -d _i18n -l fr
           python book.py -d _i18n -l en
+          ls -alh
 
       - name: Compile LaTeX document 📖
         uses: xu-cheng/latex-action@master
@@ -44,10 +45,11 @@ jobs:
 
       - name: Build the site with Jekyll 🧪
         run: |
+          ls -alh
           docker run -v ${{ github.workspace }}:/website \
           --rm basiledura/jekyll:latest \
           bundle exec jekyll build
-          ls -alh
+          ls -alh _site/
 
       - name: Deploy 🚀
         uses: JamesIves/github-pages-deploy-action@releases/v3
