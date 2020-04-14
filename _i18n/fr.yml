@@ -24,12 +24,13 @@ footer:
 
 error:
   title: Page introuvable
-  message: Cette recette n'existe pas en français...
+  message: Cette recette n'existe pas...
 
 categories:
   live: Vivant
   breakfast: Petit-déjeuner
   dinner: Dîner
+  dessert: Dessert
 
 date:
   day_names:

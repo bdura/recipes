@@ -24,9 +24,10 @@ footer:
 
 error:
   title: Page not found
-  message: The recipe does not exist in English...
+  message: The recipe does not exist...
 
 categories:
   live: Live
   breakfast: Breakfast
   dinner: Dinner
+  dessert: Dessert

@@ -1,7 +1,7 @@
 footer {
 	.language-switch {
 		float: right;
-		
+
 		 a {
 			display: inline-block;
 			text-decoration: none;
@@ -21,4 +21,12 @@ footer {
 		}
 	}
 
+	a {
+		color: $light-grey;
+
+		&:hover {
+			color: black;
+			text-decoration: none;
+		}
+	}
 }

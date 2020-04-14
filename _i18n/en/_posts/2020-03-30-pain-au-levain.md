@@ -5,14 +5,15 @@ categories:
   - live
 image: https://source.unsplash.com/j1gr2w10EtQ/auto=format
 recipe:
-  servings: 1 bred
+  servings: 1 bread
   prep: 20 minutes
   cook: 8 hours
+  rest: 6 to 12 hours
   ingredients:
     - 500g of wheat flour
     - 150g of sourdough
     - 330ml of water
-    - 10g  of salt
+    - 10g of salt
   directions:
     - title: Pointage
       directions:

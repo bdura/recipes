@@ -15,9 +15,22 @@
 	</time>
 	{% if include.post_page and include.post.source %}
 		<p class="source">
-			{% t recipe.header.source %} <a href="{{ include.post.source.link }}">
-				{{ include.post.source.name }}
-			</a>
+			{% t recipe.header.source %}
+
+			{% if include.post.source[0].first %}
+				{% for s in include.post.source %}
+					<a href="{{ s.link }}">
+						{{ s.name }}
+					</a>
+					{% if forloop.last == false %}
+							/
+					{% endif %}
+				{% endfor %}
+			{% else %}
+				<a href="{{ include.post.source.link }}">
+					{{ include.post.source.name }}
+				</a>
+			{% endif %}
 		</p>
 	{% endif %}
 </div>
