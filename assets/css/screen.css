@@ -146,4 +146,8 @@ footer .language-switch a.active { color: #888; }
 
 footer .language-switch a:hover { color: #000; }
 
+footer a { color: #999; }
+
+footer a:hover { color: black; text-decoration: none; }
+
 /*# sourceMappingURL=screen.css.map */
