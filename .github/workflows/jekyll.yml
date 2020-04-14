@@ -33,7 +33,13 @@ jobs:
       - name: Compile LaTeX document 📖
         uses: xu-cheng/latex-action@master
         with:
-          root_file: Recettes.tex Recipes.tex
+          root_file: Recipes.tex
+          args: -pdf -c
+
+      - name: Compile LaTeX document 📖
+        uses: xu-cheng/latex-action@master
+        with:
+          root_file: Recettes.tex
           args: -pdf -c
 
       - name: Build the site with Jekyll 🧪
