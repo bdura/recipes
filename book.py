@@ -1,5 +1,6 @@
 import os
 import re
+import yaml
 
 import click
 import frontmatter
@@ -14,16 +15,33 @@ recipe = env.get_template('recipe.tex')
 
 itemization = env.get_template('itemize.tex')
 enumeration = env.get_template('enumerate.tex')
+multicol = env.get_template('multicol.tex')
 
 
-def process_subsections(array, item, template=itemization):
+def process_directions(array, item, template=itemization):
     subsections = []
 
     for subsection in array:
         title = subsection['title']
         items = subsection[item]
 
-        text = r'\textit{' + title + '}\n' + template.render(items=items)
+        text = r'\textit{' + title + '}\n' \
+               + template.render(items=items)
+
+        subsections.append(text)
+
+    return '\n\n\\vspace{.1cm}'.join(subsections)
+
+
+def process_ingredients(array, item, template=itemization):
+    subsections = []
+
+    for subsection in array:
+        title = subsection['title']
+        items = subsection[item]
+
+        text = r'\textit{' + title + '}\n' \
+               + multicol.render(content=template.render(items=items))
 
         subsections.append(text)
 
@@ -61,22 +79,26 @@ class Recipe(object):
     def ingredients(self):
         ingredients = self.recipe['ingredients']
         if isinstance(ingredients[0], str):
-            return itemization.render(items=ingredients)
-        return process_subsections(ingredients, 'ingredients', itemization)
+            return multicol.render(content=itemization.render(items=ingredients))
+        return process_ingredients(ingredients, 'ingredients', itemization)
 
     @property
     def directions(self):
         directions = self.recipe['directions']
         if isinstance(directions[0], str):
             return enumeration.render(items=directions)
-        return process_subsections(directions, 'directions', enumeration)
+        return process_directions(directions, 'directions', enumeration)
 
 
 @click.command()
-@click.option('--posts-dir', '-p', default='_i18n/fr', help='Posts directory')
-@click.option('--output', '-o', default='book', help='Output')
+@click.option('--directory', '-d', default='_i18n', help='Posts directory')
+@click.option('--lang', '-l', default='fr', help='Language')
+@click.option('--output', '-o', default='./', help='Output')
 @click.option('--to-pdf', is_flag=True, help='Whether to output the PFD directly')
-def create_book(posts_dir, output, to_pdf):
+def create_book(directory, lang, output, to_pdf):
+
+    posts_dir = os.path.join(directory, lang)
+
     posts = []
     for root, _, files in os.walk(posts_dir):
         posts.extend([os.path.join(root, f) for f in files])
@@ -86,16 +108,21 @@ def create_book(posts_dir, output, to_pdf):
 
     recipes = [Recipe(post) for post in posts]
 
+    with open(os.path.join(directory, f'{lang}.yml'), 'r') as f:
+        i18n = yaml.load(f, Loader=yaml.CLoader)['book']
+
     template = env.get_template('base.tex')
-    book = template.render(recipes=recipes).replace('°', r'$^\circ$')
+    book = template.render(recipes=recipes, i18n=i18n).replace('°', r'$^\circ$')
+
+    filename = i18n["filename"]
 
     if to_pdf:
         # this builds a pdf-file inside a temporary directory
         pdf = build_pdf(book)
 
-        pdf.save_to(f'{output}.pdf')
+        pdf.save_to(os.path.join(output, f'{filename}.pdf'))
     else:
-        with open(f'{output}.tex', 'w') as f:
+        with open(os.path.join(output, f'{filename}.tex'), 'w') as f:
             f.write(book)
 
 

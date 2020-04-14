@@ -31,3 +31,9 @@ categories:
   breakfast: Breakfast
   dinner: Dinner
   dessert: Dessert
+
+book:
+  title: A few recipes...
+  prep: Preparation
+  cook: Cook time
+  filename: Recipes

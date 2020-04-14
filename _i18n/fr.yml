@@ -62,3 +62,10 @@ time:
   pm: "pm"
   formats:
     default: "%B %d, %Y %l:%M:%S %p %z"
+
+book:
+  title: Quelques recettes...
+  prep: Préparation
+  cook: Cuisson
+  filename: Recettes
+  lang: francais

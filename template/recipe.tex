@@ -1,6 +1,9 @@
 \clearpage
 
-\nnsubsection{\VAR{recipe.title}}
+% \nnsubsection{\VAR{recipe.title}}
+
+\section*{\huge \VAR{recipe.title}}
+\addcontentsline{toc}{section}{\VAR{recipe.title}}
 
 \serves{\VAR{recipe.servings}}
 \preptime{\VAR{recipe.prep}}
@@ -22,12 +25,8 @@
 
 \vspace{.2cm}
 
-\begin{multicols}{2}
 
-    \VAR{recipe.ingredients}
-
-\end{multicols}
-
+\VAR{recipe.ingredients}
 
 
 \vspace{.4cm}

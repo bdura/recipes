@@ -1,5 +1,7 @@
 \documentclass[9pt]{extarticle}
 
+\usepackage[\VAR{i18n.lang}]{babel}
+
 \usepackage{fancyhdr}
 
 \usepackage{multicol}
@@ -18,10 +20,10 @@
 % Configuration des paragraphes : pas d'alinéa, saut de ligne
 \usepackage{parskip}
 
-\usepackage{titlesec}
+% \usepackage{titlesec}
 
 % \titleformat*{\section}{\LARGE\bfseries}
-\titleformat*{\subsection}{\LARGE\bfseries}
+% \titleformat*{\subsection}{\LARGE\bfseries}
 
 \raggedcolumns
 
@@ -55,29 +57,55 @@
     \rhead{#1}
 }
 
-\newcommand{\preptime}[2][Preparation]{%
-    \lhead{#1: #2}%
-%    \lfoot{#1: #2}%
+\newcommand{\preptime}[1]{%
+    \lhead{\VAR{i18n.prep}: #1}%
 }
-\newcommand{\cooktime}[2][Cook time]{%
-    \rhead{#1: #2}%
-%    \rfoot{#1: #2}%
+\newcommand{\cooktime}[1]{%
+    \rhead{\VAR{i18n.cook}: #1}%
 }
+
+\usepackage[export]{adjustbox}
 
 \pagestyle{fancy}
 
 
+\usepackage{hyperref}
+\hypersetup{
+    colorlinks=true,
+    % pdftitle={Meta-Learning for drug discovery},
+    linkcolor=black,
+    % filecolor=YellowOrange,
+    % urlcolor=NavyBlue,
+    citecolor=black,
+    pdfborder={0 0 0}
+}
+
+
 \begin{document}
+
+\begin{titlepage}
+  \begin{center}
+    \vspace*{2cm}
+
+    \Huge
+    \textbf{\VAR{i18n.title}}
+
+    \large
+
+    \vfill
+
+    \today
+
+    \vfill
+
+  \end{center}
+\end{titlepage}
 
 \frontmatter
 
 \tableofcontents
 
 \mainmatter
-
-\cleardoublepage
-
-\nnsection{Salé}
 
 \cleardoublepage
 

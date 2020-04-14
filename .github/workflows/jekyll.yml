@@ -27,15 +27,21 @@ jobs:
 
       - name: Make LaTeX document 📕
         run: |
-          python book.py -p _i18n/fr -o book-fr
-          python book.py -p _i18n/en -o book-en
+          python book.py -d _i18n -l fr
+          python book.py -d _i18n -l en
 
       - name: Compile LaTeX document 📖
-        run: docker run -v ${{ github.workspace }}:/data mirisbowring/texlive_ctan_full:2019 latexmk -pdf -c
+        # run: docker run -v ${{ github.workspace }}:/data mirisbowring/texlive_ctan_full:2019 latexmk -pdf -c
+        uses: xu-cheng/latex-action@master
+        with:
+          root_file: Recettes.tex Recipes.tex
+          args: -pdf -c
+          extra_system_packages: geometry
 
       - name: Build the site with Jekyll 🧪
         run: |
-          docker run -v ${{ github.workspace }}:/website --rm basiledura/jekyll:latest \
+          docker run -v ${{ github.workspace }}:/website \
+          --rm basiledura/jekyll:latest \
           bundle exec jekyll build
 
       - name: Deploy 🚀
