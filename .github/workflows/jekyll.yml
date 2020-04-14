@@ -34,7 +34,7 @@ jobs:
       - name: Compile LaTeX document 📖
         run: |
           docker run --rm -v ${{ github.workspace }}:/home danteev/texlive \
-          latexmk -pdf -c
+          latexmk -pdf -c Recipes.tex Recettes.tex
 
       - name: Build the site with Jekyll 🧪
         run: |
