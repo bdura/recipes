@@ -109,7 +109,7 @@ def create_book(directory, lang, output, to_pdf):
     recipes = [Recipe(post) for post in posts]
 
     with open(os.path.join(directory, f'{lang}.yml'), 'r') as f:
-        i18n = yaml.load(f, Loader=yaml.CLoader)['book']
+        i18n = yaml.load(f)['book']
 
     template = env.get_template('base.tex')
     book = template.render(recipes=recipes, i18n=i18n).replace('°', r'$^\circ$')
