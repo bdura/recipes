@@ -47,6 +47,7 @@ jobs:
           docker run -v ${{ github.workspace }}:/website \
           --rm basiledura/jekyll:latest \
           bundle exec jekyll build
+          ls -alh
 
       - name: Deploy 🚀
         uses: JamesIves/github-pages-deploy-action@releases/v3
