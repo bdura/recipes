@@ -13,3 +13,10 @@ __pycache__
 *.synctex.gz
 latex-output/
 /template/*.pdf
+
+*.aux
+*.toc
+*.log
+*.fls
+*.out 
+*.fdb_latexmk

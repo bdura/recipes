@@ -60,8 +60,14 @@ exclude:
   - book.py
   - requirements.txt
   - Dockerfile
-  - "*.tex"
   - template/*
+  - "*.tex"
+  - "*.aux"
+  - "*.toc"
+  - "*.log"
+  - "*.fls"
+  - "*.out"
+  - "*.fdb_latexmk"
 
 include:
   - .nojekyll

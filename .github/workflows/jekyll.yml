@@ -29,25 +29,22 @@ jobs:
         run: |
           python book.py -d _i18n -l fr
           python book.py -d _i18n -l en
-          ls -alh
 
-      - name: Compile LaTeX document 📖
+      - name: Compile French LaTeX document 📖
         uses: xu-cheng/latex-action@master
         with:
           root_file: Recettes.tex
 
-      - name: Compile LaTeX document 📖
+      - name: Compile English LaTeX document 📖
         uses: xu-cheng/latex-action@master
         with:
           root_file: Recipes.tex
 
       - name: Build the site with Jekyll 🧪
         run: |
-          ls -alh
           docker run -v ${{ github.workspace }}:/website \
           --rm basiledura/jekyll:latest \
           bundle exec jekyll build
-          ls -alh _site/
 
       - name: Deploy 🚀
         uses: JamesIves/github-pages-deploy-action@releases/v3
