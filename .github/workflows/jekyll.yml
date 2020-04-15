@@ -32,9 +32,14 @@ jobs:
           ls -alh
 
       - name: Compile LaTeX document 📖
-        run: |
-          docker run --rm -v ${{ github.workspace }}:/home danteev/texlive \
-          latexmk -pdf -c Recipes.tex Recettes.tex
+        uses: xu-cheng/latex-action@master
+        with:
+          root_file: Recettes.tex
+
+      - name: Compile LaTeX document 📖
+        uses: xu-cheng/latex-action@master
+        with:
+          root_file: Recipes.tex
 
       - name: Build the site with Jekyll 🧪
         run: |
