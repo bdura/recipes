@@ -29,8 +29,9 @@ error:
 categories:
   live: Live
   breakfast: Breakfast
-  dinner: Dinner
+  main: Main
   dessert: Dessert
+  beverage: Beverage
 
 book:
   title: A few recipes...

@@ -29,8 +29,9 @@ error:
 categories:
   live: Vivant
   breakfast: Petit-déjeuner
-  dinner: Dîner
+  main: Principal
   dessert: Dessert
+  beverage: Boisson
 
 date:
   day_names:

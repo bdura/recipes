@@ -26,13 +26,13 @@ recipe:
         - Sortir le pâton délicatement sur un plan de travail fariné.
         - Replier le pâton sur lui-même en tâchant de ne pas perturber les bulles.
         - Remettre le pâton sur un torchon propre, sec et fariné, la “couture” vers le haut. recouvrir avec le reste du torchon.
-        - Laisser reposer une heure à une heure et demie.
+        - Laisser reposer au moins une heure.
     - title: Cuisson
       directions:
-        - Préchauffer le four à 240°C. Si vous avez une cocotte en fonte, mettez-la à chauffer aussi.
+        - Préchauffer le four à 240°C. Si vous avez une cocotte en fonte, mettez-la à chauffer aussi. Sinon, mettez un plat en bas du four – il servira à assurer l'humidité du four.
         - Sur un plan de travail fariné, sortir délicatement le pâton de son torchon, coutûre vers le bas.
         - Avec un couteau très bien aiguisé, pratiquer une ou plusieurs incision.
-        - Enfourner.
+        - Enfourner. Si vous utilisez une cocotte, cuire 30 minutes couvercle fermé puis 10 à 20 minutes couvercle ouvert. Sinon, ajoutez de l'eau bouillante dans le plat prévu au moment du préchauffage juste avant d'enfourner et cuisez pendant 40 à 50 minutes. L'humidité permet au pain de former une belle croûte.
 ---
 
 Un bon pain au levain...

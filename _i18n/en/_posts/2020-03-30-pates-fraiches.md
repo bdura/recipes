@@ -2,7 +2,7 @@
 date: 2020-03-29
 title: Fresh pasta
 categories:
-  - dinner
+  - main
 image: https://source.unsplash.com/4nXkhLCrkLo/auto=format
 recipe:
   servings: 5 portions

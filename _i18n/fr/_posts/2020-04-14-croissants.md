@@ -13,28 +13,29 @@ recipe:
   servings: 18 croissants
   prep: 40 minutes
   cook: 10-15 minutes
-  rest: 2 heures
+  rest: 2 à 48 heures
   ingredients:
     - 500g de farine
-    - 200g de beurre
-    - 50g de sucre
-    - 200ml de lait
+    - 300g de beurre pour le feuilletage
+    - 60g de beurre pour la pâte
+    - 60g de sucre
+    - 350ml de lait
     - 10g de levure
-    - 2 oeufs
+    - 1 oeuf
     - 10g de sel
   directions:
     - title: Préparation de la pâte
       directions:
-        - Mélangez farine, sucre, lait et levure. Pétrir quelques minutes pour obtenir une pâte homogène. Laisser reposer une heure à température ambiante.
-        - Malaxer de nouveau puis mettre la pâte au réfrigérateur pendant 30 minutes. Il faut refroidir la pâte pour éviter que le beurre fonde.
-        - Étaler la pâte sur le plan de travail fariné pour obtenir un carré de 30cm x 30cm environ. Répartir le beurre au milieu du carré, en laissant quelques centimètres de marges.
+        - Délayez la levure dans le lait tiédi. Mélangez la farine, le sucre, le beurre ramolli et le lait. Pétrir quelques minutes pour obtenir une pâte homogène. Laisser reposer une heure à température ambiante.
+        - Malaxer de nouveau pour retirer le gaz puis mettre la pâte au réfrigérateur pendant au moins 30 minutes (jusqu'à 24h). Il faut refroidir la pâte pour éviter que le beurre fonde.
+        - Étaler la pâte sur le plan de travail fariné pour obtenir un carré de 40cm x 40cm environ. Répartir le beurre au milieu du carré, en laissant quelques centimètres de marges.
         - Replier les coins vers le centre, souder les côtés entre eux en humidifiant les bords.
     - title: Feuilletage
       directions:
         - Allonger la pâte au rouleau à patisserie, en veillant à bien la fariner des deux côtés. Sans farine, la pâte risque d'accrocher au pland de travail et au rouleau, laissant le beurre découvert.
         - Replier la pâte en trois puis réaliser un quart de tour pour que la pliure soit sur le côté.
         - Remettre la pâte au réfrigérateur une dizaine de minutes pour s'assurer de ne pas laisser fondre le beurre.
-        - Recommencer ces étapes deux fois pour obtenir une pâte feuilletée.
+        - Recommencer ces étapes deux fois pour obtenir une pâte feuilletée, et laisser reposer au frais pendant au moins une heure (jusqu'à 24h).
     - title: Préparation des croissants
       directions:
         - Étaler la pâte sur le plan de travail, former un rectangle de 40cm x 50cm environ. Couper en deux dans le sens de la longueur.
