@@ -30,7 +30,7 @@ logo: /assets/images/author.png
 # Paginator configuration
 paginate: 10
 paginate_path: "/:num/"
-permalink: pretty
+permalink: /:year/:month/:day/:title/
 
 # Localisation configuration
 languages: ["fr", "en"]
