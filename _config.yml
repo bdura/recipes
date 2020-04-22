@@ -23,7 +23,7 @@ email: basile@bdura.me
 description: >- # this means to ignore newlines until "baseurl:"
   Un site de recettes...
 baseurl: "" # the subpath of your site, e.g. /blog
-url: "https://recipes.bdura.me" # the base hostname & protocol for your site, e.g. http://example.com
+url: "https://recettes.bdura.me" # the base hostname & protocol for your site, e.g. http://example.com
 
 logo: /assets/images/author.png
 
