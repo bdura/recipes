@@ -61,19 +61,19 @@ class Recipe(object):
 
     @property
     def note(self):
-        return self.post.content
+        return '' #self.post.content
 
     @property
     def servings(self):
-        return self.recipe['servings']
+        return self.recipe.get('servings', '')
 
     @property
     def prep(self):
-        return self.recipe['prep']
+        return self.recipe.get('prep', '')
 
     @property
     def cook(self):
-        return self.recipe['cook']
+        return self.recipe.get('cook', '')
 
     @property
     def ingredients(self):
