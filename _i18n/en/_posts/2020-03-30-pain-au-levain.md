@@ -10,10 +10,10 @@ recipe:
   cook: 8 hours
   rest: 6 to 12 hours
   ingredients:
-    - 500g of wheat flour
-    - 150g of sourdough
-    - 330ml of water
-    - 10g of salt
+    - 500 g of wheat flour
+    - 150 g of sourdough
+    - 330 mL of water
+    - 10 g of salt
   directions:
     - title: Pointage
       directions:

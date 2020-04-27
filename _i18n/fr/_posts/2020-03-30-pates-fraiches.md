@@ -9,9 +9,9 @@ recipe:
   prep: 20 minutes
   cook: 10 minutes
   ingredients:
-    - 400g de farine
+    - 400 g de farine
     - 4 oeufs
-    - 15ml d'eau
+    - 15 ml d'eau
     - une pincée de sel
   directions:
     - Mélanger les ingrédients et pétrir la pâte pendant quelques minutes.

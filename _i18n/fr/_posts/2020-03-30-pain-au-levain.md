@@ -10,10 +10,10 @@ recipe:
   rest: 6 à 12 heures
   cook: 45 minutes
   ingredients:
-    - 500g de farine blanche
-    - 150g de levain
-    - 330ml d'eau
-    - 10g de sel
+    - 500 g de farine blanche
+    - 150 g de levain
+    - 350 mL d'eau
+    - 10 g de sel
   directions:
     - title: Pointage
       directions:

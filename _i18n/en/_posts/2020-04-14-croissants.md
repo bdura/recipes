@@ -15,13 +15,13 @@ recipe:
   cook: 10-15 minutes
   rest: 2 heures
   ingredients:
-    - 500g de farine
-    - 200g de beurre
-    - 50g de sucre
-    - 200ml de lait
-    - 10g de levure
+    - 500 g de farine
+    - 200 g de beurre
+    - 50 g de sucre
+    - 200 mL de lait
+    - 10 g de levure
     - 2 oeufs
-    - 10g de sel
+    - 10 g de sel
   directions:
     - title: The dough
       directions:

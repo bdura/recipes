@@ -9,9 +9,9 @@ recipe:
   prep: 20 minutes
   cook: 10 minutes
   ingredients:
-    - 400g of flour
+    - 400 g of flour
     - 4 eggs
-    - 15ml of water
+    - 15 mL of water
     - a pinch of salt
   directions:
     - Mix the ingredients together and knead the dough for a few minutes.

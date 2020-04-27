@@ -15,14 +15,14 @@ recipe:
   cook: 10-15 minutes
   rest: 2 à 48 heures
   ingredients:
-    - 500g de farine
-    - 300g de beurre pour le feuilletage
-    - 60g de beurre pour la pâte
-    - 60g de sucre
-    - 350ml de lait
-    - 10g de levure
+    - 500 g de farine
+    - 300 g de beurre pour le feuilletage
+    - 60 g de beurre pour la pâte
+    - 60 g de sucre
+    - 350 mL de lait
+    - 10 g de levure
     - 1 oeuf
-    - 10g de sel
+    - 10 g de sel
   directions:
     - title: Préparation de la pâte
       directions:
