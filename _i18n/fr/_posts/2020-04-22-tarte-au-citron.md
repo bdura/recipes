@@ -1,6 +1,6 @@
 ---
 date: 2020-04-22
-title: Lemon pie
+title: Tarte au citron
 categories:
   - dessert
 image: https://source.unsplash.com/EYWZp_UJaYw/auto=format
@@ -8,7 +8,7 @@ source:
   name: Anne-Sophie Pic
   link: https://www.anne-sophie-pic.com/menu-de-la-semaine-13-au-19-avril-2/
 recipe:
-  servings: 1 pie
+  servings: 1 tarte
   prep: 30 minutes
   cook: 13 minutes
   ingredients:
