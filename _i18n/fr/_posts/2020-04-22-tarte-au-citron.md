@@ -18,7 +18,7 @@ recipe:
         - 65g de sucre glace
         - 75g de beurre
         - 3 jaunes d'oeufs
-    - title: Le crémeux de citron
+    - title: Le crémeux au citron
       ingredients:
         - 125ml de jus de citron
         - 2 oeufs entiers
@@ -35,7 +35,7 @@ recipe:
       directions:
         - Mélanger la farine, le sucre et le beurre. Ajouter les jaunes d'oeuf et mélanger pour obtenir un boule. Mettre la pâte au réfrigérateur pendant au moins deux heures.
         - Étaler la pâte et la placer dans un moule. Cuire à 150g pendant 15 minutes.
-    - title: Le crémeux
+    - title: Le crémeux au citron
       directions:
         - Mélanger le jus de citron, les jaunes et les oeufs dans une casserole. Porter à ébullition et laisser refroidir jusqu'à 30°C.
         - Ajouter le beurre coupé en cubes, puis mixer le tout. Mettre le crémeux au réfrigérateur.
