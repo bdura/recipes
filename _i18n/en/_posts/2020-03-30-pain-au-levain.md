@@ -34,5 +34,3 @@ recipe:
         - Avec un couteau très bien aiguisé, pratiquer une ou plusieurs incision.
         - Enfourner.
 ---
-
-Un bon pain au levain...

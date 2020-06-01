@@ -39,3 +39,5 @@ book:
   cook: Cook time
   filename: Recipes
   lang: english
+  link: Recipes.pdf
+  text: Download the PDF

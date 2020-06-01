@@ -1,9 +1,9 @@
 - name: navigation.home
   link: /
 - name: navigation.recipes
-  link: /recipes/
+  link: /recettes/
 - name: navigation.about
-  link: /about/
+  link: /a-propos/
 # - name: Recettes
 #   link: /recipes/
 # - name: Principal

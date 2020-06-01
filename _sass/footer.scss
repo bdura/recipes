@@ -1,8 +1,9 @@
 footer {
 	.language-switch {
+
 		float: right;
 
-		 a {
+		a {
 			display: inline-block;
 			text-decoration: none;
 			// padding: 20px 15px;
@@ -28,5 +29,9 @@ footer {
 			color: black;
 			text-decoration: none;
 		}
+	}
+
+	.pdf-link {
+		float: left;
 	}
 }
