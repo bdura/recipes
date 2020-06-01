@@ -34,10 +34,10 @@ recipe:
     - title: Le sablé
       directions:
         - Mélanger la farine, le sucre et le beurre. Ajouter les jaunes d'oeuf et mélanger pour obtenir un boule. Mettre la pâte au réfrigérateur pendant au moins deux heures.
-        - Étaler la pâte et la placer dans un moule. Cuire à 150g pendant 15 minutes.
+        - Étaler la pâte et la placer dans un moule. Cuire à 150°C pendant 20 minutes.
     - title: Le crémeux au citron
       directions:
-        - Mélanger le jus de citron, les jaunes et les oeufs dans une casserole. Porter à ébullition et laisser refroidir jusqu'à 30°C.
+        - Mélanger le jus de citron, le sucre, les jaunes et les oeufs dans une casserole. Porter à ébullition et laisser refroidir jusqu'à 30°C.
         - Ajouter le beurre coupé en cubes, puis mixer le tout. Mettre le crémeux au réfrigérateur.
     - title: La meringue italienne
       directions:
