@@ -18,6 +18,7 @@ gem "jekyll", github: "jekyll/jekyll", ref: "refs/pull/7948/head"
 group :jekyll_plugins do
   gem 'jekyll-paginate', '1.1.0'
   gem 'jekyll-multiple-languages-plugin'
+  gem 'jekyll-scholar'
 end
 
 # Windows and JRuby does not include zoneinfo files, so bundle the tzinfo-data gem
