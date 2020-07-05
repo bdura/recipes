@@ -11,7 +11,7 @@ recipe:
   ingredients:
     - 400 g de farine
     - 4 oeufs
-    - 15 ml d'eau
+    - 15 mL d'eau
     - une pincée de sel
   directions:
     - Mélanger les ingrédients et pétrir la pâte pendant quelques minutes.

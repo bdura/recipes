@@ -14,22 +14,22 @@ recipe:
   ingredients:
     - title: Le sablé
       ingredients:
-        - 180g de farine
-        - 65g de sucre glace
-        - 75g de beurre
+        - 180 g de farine
+        - 65 g de sucre glace
+        - 75 g de beurre
         - 3 jaunes d'oeufs
     - title: Le crémeux au citron
       ingredients:
-        - 125ml de jus de citron
+        - 125 mL de jus de citron
         - 2 oeufs entiers
         - 3 jaunes d'oeuf
-        - 75g de sucre
-        - 75g de beurre
+        - 75 g de sucre
+        - 75 g de beurre
     - title: La meringue italienne
       ingredients:
         - 6 blancs d'oeufs
-        - 180g de sucre
-        - 50cl d'eau
+        - 180 g de sucre
+        - 50 cL d'eau
   directions:
     - title: Le sablé
       directions:

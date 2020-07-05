@@ -14,22 +14,22 @@ recipe:
   ingredients:
     - title: The biscuit
       ingredients:
-        - 180g of flour
-        - 65g of icing sugar
-        - 75g of butter
+        - 180 g of flour
+        - 65 g of icing sugar
+        - 75 g of butter
         - 3 egg yolks
     - title: The lemon curd
       ingredients:
-        - 125ml of lemon juice
+        - 125 mL of lemon juice
         - 2 eggs
         - 3 egg yolks
-        - 75g of sugar
-        - 75g of butter
+        - 75 g of sugar
+        - 75 g of butter
     - title: The meringue
       ingredients:
         - 6 egg whites
-        - 180g of sugar
-        - 50cl of water
+        - 180 g of sugar
+        - 50 cL of water
   directions:
     - title: The biscuit
       directions:
