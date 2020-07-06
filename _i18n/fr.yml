@@ -19,6 +19,11 @@ navigation:
   home: Accueil
   recipes: Recettes
 
+pagination:
+  previous: Précédent
+  of: sur
+  next: Suivant
+
 footer:
   theme: Adapté d'un thème
 

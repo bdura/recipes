@@ -29,3 +29,20 @@ nav {
 	// 	float: right;
 	// }
 }
+
+
+.pagination {
+
+	a.page-link {
+
+			color: #000;
+
+			&.disabled {
+				color: #888;
+			}
+
+			&:hover {
+				color: #000 !important;
+			}
+		}
+	}

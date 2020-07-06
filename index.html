@@ -5,3 +5,18 @@ layout: default
 {% for post in paginator.posts %}
   {% include recipe-card.html post=post %}
 {% endfor %}
+
+{% if paginator.total_pages > 1 %}
+  <div>
+    <ul class="pagination justify-content-center">
+      <li class="page-item{% unless paginator.previous_page %} disabled{% endunless %}">
+        <a class="page-link{% unless paginator.previous_page %} disabled{% endunless %}" href="{{ paginator.previous_page_path }}" tabindex="-1" aria-disabled="true">{% t pagination.previous %}</a>
+      </li>
+
+      <li class="page-item disabled"><a class="page-link disabled" href="#">{{ paginator.page }} {% t pagination.of %} {{ paginator.total_pages }}</a></li>
+      <li class="page-item{% unless paginator.next_page %} disabled{% endunless %}">
+        <a class="page-link{% unless paginator.next_page %} disabled{% endunless %}" href="{{ paginator.next_page_path }}" tabindex="-1" aria-disabled="true">{% t pagination.next %}</a>
+      </li>
+    </ul>
+  </div>
+{% endif %}
