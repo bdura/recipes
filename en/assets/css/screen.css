@@ -6,6 +6,12 @@ nav a.active, nav .language-switch.active { color: #888; }
 
 nav a:hover, nav .language-switch:hover { color: #000; }
 
+.pagination a.page-link { color: #000; }
+
+.pagination a.page-link.disabled { color: #888; }
+
+.pagination a.page-link:hover { color: #000 !important; }
+
 .sidebar img { max-height: 250px; }
 
 html, body { padding: 0; margin: 0; line-height: 1.8em; }
