@@ -22,3 +22,5 @@ group :jekyll_plugins do
 end
 
 gem "webrick", "~> 1.7"
+
+gem "kramdown", ">= 2.3.1"
